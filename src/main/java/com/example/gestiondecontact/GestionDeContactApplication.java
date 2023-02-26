@@ -23,7 +23,6 @@ public class GestionDeContactApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         DateFormat date =new SimpleDateFormat("dd/MM/yyyy");
         contactRepository.save(new Contact(
-                null,
                 "taib",
                 "hicham",
                 date.parse("08/12/2000"),
@@ -32,7 +31,6 @@ public class GestionDeContactApplication implements CommandLineRunner {
                 "photo1"
 
         ));contactRepository.save(new Contact(
-                null,
                 "taib",
                 "omar",
                 date.parse("08/12/2000"),
@@ -41,7 +39,6 @@ public class GestionDeContactApplication implements CommandLineRunner {
                 "photo1"
 
         ));contactRepository.save(new Contact(
-                null,
                 "taib",
                 "abdelhak",
                 date.parse("08/12/2000"),

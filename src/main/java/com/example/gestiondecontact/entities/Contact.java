@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Contact implements Serializable {
     @Id @GeneratedValue
-    private Long id;
+    private int id;
     private String nom;
     private String prenom;
     @Temporal(TemporalType.DATE)
@@ -23,4 +23,12 @@ public class Contact implements Serializable {
     private String tel;
     private String photo;
 
+    public Contact(String nom, String prenom, Date dateDeNaissance, String email, String tel, String photo) {
+        this.nom = nom;
+        this.prenom = prenom;
+        DateDeNaissance = dateDeNaissance;
+        this.email = email;
+        this.tel = tel;
+        this.photo = photo;
+    }
 }
