@@ -14,4 +14,6 @@ public interface ContactRepository extends JpaRepository<Contact, Integer> {
     @Query("select c from Contact c where c.nom like :x or c.prenom like :x")
     public Page<Contact> chercher(@Param("x") String mc,Pageable pageable );
 
+    public Page<Contact> findAll(Pageable pageable);
+
 }

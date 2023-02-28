@@ -19,8 +19,9 @@ public class ContactRestService {
     private ContactRepository contactRepository;
 
     @RequestMapping(value = "/contacts",method = RequestMethod.GET)
-    public List<Contact> getContacts(){
-        return contactRepository.findAll();
+    public Page<Contact> getContacts(@RequestParam(value = "page" , defaultValue = "0") int page,
+                                     @RequestParam(value = "size",defaultValue = "5") int size){
+        return contactRepository.findAll(PageRequest.of(page,size));
     }
 
     @RequestMapping(value = "/contacts",method = RequestMethod.POST)
