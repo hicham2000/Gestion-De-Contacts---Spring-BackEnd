@@ -17,7 +17,6 @@ import java.util.Optional;
 public class ContactRestService {
     @Autowired
     private ContactRepository contactRepository;
-
     @RequestMapping(value = "/contacts",method = RequestMethod.GET)
     public Page<Contact> getContacts(@RequestParam(value = "page" , defaultValue = "0") int page,
                                      @RequestParam(value = "size",defaultValue = "5") int size){
